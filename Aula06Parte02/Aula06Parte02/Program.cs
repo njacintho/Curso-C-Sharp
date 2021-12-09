@@ -4,22 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aula06
+namespace Aula06Parte02
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite um número de 1 a 10: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            int hora = DateTime.Now.Hour;
 
-            if (n < 1 || n > 10)
+            if(hora > 17)
             {
-                Console.WriteLine("O número não está dentro do range");
+                Console.WriteLine("Boa noite");
+            }
+            else if (hora > 11)
+            {
+                Console.WriteLine("Boa Tarde");
             }
             else
             {
-                Console.WriteLine("Obrigado");
+                Console.WriteLine("Bom dia");
             }
             Console.ReadLine();
         }
